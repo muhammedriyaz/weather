@@ -13,7 +13,7 @@ class AboutPageView(TemplateView):
     template_name = "about.html"
 
 def getWeatherData(request):
-    apiKey = 'your api key here'
+    apiKey = 'your-api-key-here'
     city   = request.POST['city']
     res = requests.get('http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid='+apiKey)
     data = res.json()
